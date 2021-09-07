@@ -24,6 +24,7 @@ class _ListitemsState extends State<Listitems> {
     "Community & Government",
     "Wellness"
   ];
+  ScrollController _scrollController = new ScrollController();
   var its;
   List<listmodel> items = [
     listmodel(name: "FOOD", num: 16, carditem: [
@@ -147,7 +148,23 @@ class _ListitemsState extends State<Listitems> {
                               child: Padding(
                                 padding: const EdgeInsets.all(2.0),
                                 child: InkWell(
-                                  onTap: () {},
+                                  onTap: () {
+                                    if (names[index] == 0) {
+                                      _scrollController.animateTo(
+                                        0,
+                                        curve: Curves.easeOut,
+                                        duration:
+                                            const Duration(milliseconds: 300),
+                                      );
+                                    } else if (names[index] == 1) {
+                                      _scrollController.animateTo(
+                                        3,
+                                        curve: Curves.easeOut,
+                                        duration:
+                                            const Duration(milliseconds: 300),
+                                      );
+                                    }
+                                  },
                                   child: Container(
                                     width: 180,
                                     height: 80,
@@ -203,6 +220,7 @@ class _ListitemsState extends State<Listitems> {
                               width: MediaQuery.of(context).size.width / 2,
                               child: ListView.builder(
                                   shrinkWrap: true,
+                                  controller: _scrollController,
                                   physics: NeverScrollableScrollPhysics(),
                                   itemCount: items[index].carditem.length,
                                   itemBuilder: (context, index2) {
