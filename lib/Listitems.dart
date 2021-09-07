@@ -87,10 +87,7 @@ class _ListitemsState extends State<Listitems> {
       backgroundColor: Colors.black,
       appBar: AppBar(
         title: Text("Try Film and TV"),
-        leading: Icon(
-          Icons.search,
-          size: 20,
-        ),
+        leading: Icon(Icons.search, size: 20, color: Colors.white),
         actions: [],
       ),
       bottomNavigationBar: BottomNavigationBar(
