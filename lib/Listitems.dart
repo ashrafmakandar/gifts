@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:gift/listmodel.dart';
 import 'package:gift/listmodel.dart';
 
+import 'package:scroll_to_index/scroll_to_index.dart';
 import 'listmodel.dart';
 
 class Listitems extends StatefulWidget {
@@ -25,6 +26,11 @@ class _ListitemsState extends State<Listitems> {
     "Wellness"
   ];
   ScrollController _scrollController = new ScrollController();
+
+  final scrollDirection = Axis.vertical;
+
+  late AutoScrollController controller;
+
   var its;
   List<listmodel> items = [
     listmodel(name: "FOOD", num: 16, carditem: [
