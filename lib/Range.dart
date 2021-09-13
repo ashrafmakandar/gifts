@@ -146,7 +146,7 @@ class _RangeState extends State<Range> {
               children: [
                 Text(
                   "Loan Tenure",
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 25),
                 ),
                 Container(
                   width: 100,
