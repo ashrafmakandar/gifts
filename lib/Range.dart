@@ -145,7 +145,7 @@ class _RangeState extends State<Range> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text(
-                  "Loan Tenure",
+                  "Loan Tenurity",
                   style: TextStyle(fontSize: 25),
                 ),
                 Container(
