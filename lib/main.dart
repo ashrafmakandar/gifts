@@ -6,7 +6,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gift/Range.dart';
 import 'package:gift/shapes.dart';
 
+import 'package:flutter_offline/flutter_offline.dart';
 import 'Listitems.dart';
+
+import 'package:connectivity_plus/connectivity_plus.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -35,6 +38,35 @@ class MyApp extends StatelessWidget {
         BlocProvider<CartBloc>(
             create: (_) => CartBloc(InitailCartstate(count: 0))),
       ], child: Dats()) */
-            Shapes());
+
+            OfflineBuilder(
+          connectivityBuilder: (context, connectivity, child) {
+            final bool connected = connectivity != ConnectivityResult.none;
+            return Scaffold(
+              body: new Stack(
+                fit: StackFit.expand,
+                children: [
+                  Positioned(
+                    height: 54.0,
+                    left: 0.0,
+                    right: 0.0,
+                    child: Container(
+                      color: connected ? Color(0xFF00EE44) : Color(0xFFEE4400),
+                      child: Center(
+                        child: Text("${connected ? 'ONLINE' : 'OFFLINE'}"),
+                      ),
+                    ),
+                  ),
+                  Center(
+                    child: new Text(
+                      'Yay!',
+                    ),
+                  ),
+                ],
+              ),
+            );
+          },
+          child: Shapes(),
+        ));
   }
 }
