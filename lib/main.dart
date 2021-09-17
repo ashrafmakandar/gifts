@@ -4,6 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gift/Range.dart';
+import 'package:gift/shapes.dart';
 
 import 'Listitems.dart';
 
@@ -34,6 +35,6 @@ class MyApp extends StatelessWidget {
         BlocProvider<CartBloc>(
             create: (_) => CartBloc(InitailCartstate(count: 0))),
       ], child: Dats()) */
-            Range());
+            Shapes());
   }
 }
