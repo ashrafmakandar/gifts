@@ -625,13 +625,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.0"
-  pp_local_notifications:
-    dependency: "direct main"
-    description:
-      name: pp_local_notifications
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.0.1"
   process:
     dependency: transitive
     description:

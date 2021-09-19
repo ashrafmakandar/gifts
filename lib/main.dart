@@ -31,42 +31,12 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blueGrey,
         ),
-        home:
-            /* MultiBlocProvider(providers: [
+        home: Shapes());
+    /* MultiBlocProvider(providers: [
         BlocProvider<FoodBloc>(
             create: (_) => FoodBloc(FoodApi(), InitialLoadingState())),
         BlocProvider<CartBloc>(
             create: (_) => CartBloc(InitailCartstate(count: 0))),
       ], child: Dats()) */
-
-            OfflineBuilder(
-          connectivityBuilder: (context, connectivity, child) {
-            final bool connected = connectivity != ConnectivityResult.none;
-            return Scaffold(
-              body: new Stack(
-                fit: StackFit.expand,
-                children: [
-                  Positioned(
-                    height: 54.0,
-                    left: 0.0,
-                    right: 0.0,
-                    child: Container(
-                      color: connected ? Color(0xFF00EE44) : Color(0xFFEE4400),
-                      child: Center(
-                        child: Text("${connected ? 'ONLINE' : 'OFFLINE'}"),
-                      ),
-                    ),
-                  ),
-                  Center(
-                    child: new Text(
-                      'Yay!',
-                    ),
-                  ),
-                ],
-              ),
-            );
-          },
-          child: Shapes(),
-        ));
   }
 }
