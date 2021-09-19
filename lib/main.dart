@@ -6,10 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gift/Range.dart';
 import 'package:gift/shapes.dart';
 
-import 'package:flutter_offline/flutter_offline.dart';
 import 'Listitems.dart';
-
-import 'package:connectivity_plus/connectivity_plus.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
