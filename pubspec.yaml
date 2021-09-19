@@ -22,6 +22,8 @@ environment:
 
 dependencies:
   auto_size_text_pk: ^3.0.0
+  chart_sparkline: ^1.0.5
+  connectivity_plus: ^1.1.0
   cupertino_icons: ^1.0.2
   equatable: ^2.0.3
   firebase_analytics: ^8.2.0
@@ -34,6 +36,7 @@ dependencies:
   flutter_datetime_picker: ^1.5.1
   flutter_launcher_icons: null
   flutter_local_notifications: ^8.1.1
+  flutter_offline: ^2.0.0
   fluttertoast: ^8.0.7
   google_sign_in: ^5.0.7
   graphql: ^5.0.0
@@ -43,11 +46,11 @@ dependencies:
   pagination: ^0.1.0
   path: ^1.8.0
   path_provider: ^2.0.2
-  pp_local_notifications: ^0.0.1
   provider: ^5.0.0
+  scroll_to_index: ^2.0.0
   sqflite: ^2.0.0+3
   story_view: ^0.13.1
-  scroll_to_index: ^2.0.0
+  syncfusion_flutter_charts: ^19.2.62
 
 dev_dependencies:
   flutter_test:
